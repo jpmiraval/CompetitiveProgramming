@@ -1,0 +1,32 @@
+#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int comprobar(int x){
+int aux = x;
+int cifra1 = aux/1000;
+aux-=cifra1*1000;
+int cifra2 = aux/100;
+aux-=cifra2*100;
+int cifra3 = aux/10;
+aux-=cifra3*10;
+int cifra4 = aux;
+int retorno=0;
+if(cifra1!=cifra2 && cifra1 !=cifra3 && cifra1 !=cifra4 && cifra2!=cifra3 && cifra2!=cifra4 && cifra3!=cifra4){
+    retorno = 1;
+}return retorno;
+ }
+
+int main() {
+ 
+
+int numero;
+
+cin >> numero;
+
+do{
+  numero++;
+}while(comprobar(numero) == 0);
+
+cout << numero;}
